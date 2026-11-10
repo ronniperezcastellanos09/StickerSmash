@@ -1,8 +1,14 @@
 import { NativeTabs } from 'expo-router/native-tabs';
 
+import { colors } from '@/constants/theme';
+
 export default function TabLayout() {
   return (
-    <NativeTabs>
+    <NativeTabs
+      tintColor={colors.accent}
+      backgroundColor={colors.background}
+      indicatorColor={colors.accent}
+      rippleColor={colors.border}>
       <NativeTabs.Trigger name="index">
         <NativeTabs.Trigger.Label>Inicio</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
